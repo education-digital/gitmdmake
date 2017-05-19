@@ -2,7 +2,9 @@
 title: "Demonstrating Literate R"
 author: "Jim Tyson"
 date: "4 April 2016"
-output: pdf_document
+output:
+  pdf_document: default
+  word_document: default
 bibliography: bibliography.bib
 toc: yes
 ---
@@ -21,7 +23,7 @@ Reproducibility is the minimum standard for research.  Broman says
 
 And Peng in his presentation _Make the World a Better Place through Reproducible Research_ speaks of *Reproducible Research: A Minimum Standard* with the following characteristics
 
-* Published research where the following are made available:
+* Published research where the following are made available:'
     + Analytic data
     + Computer code implementing methods
     + Documentation about code/data
@@ -150,6 +152,13 @@ library(xtable)
 coeffs<-xtable(summary(modenghist)$coef)
 print(coeffs)
 ```
+
+
+```{r}
+head(iris)
+knitr::kable(head(iris))
+```
+
 
 \includegraphics[width=200pt]{avg.png}
 
